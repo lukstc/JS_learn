@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box{
+            border: 1px solid black;
+            width: 200px;
+            height: 50px;
+            padding-top: 200px;
+            margin: 100px auto;
+            background: url("img/A.jpg") no-repeat;
+            background-size: 200px;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li id='li-01'><img src="img/A.jpg" width="50", height="50"></li>
+        <li id='li-02'><img src="img/B.jpg" width="50" height="50"></li>
+        <li id='li-03'><img src="img/C.jpg" width="50" height="50"></li>
+        <li id='li-04'><img src="img/D.jpg" width="50" height="50"></li>
+    </ul>
+</div>
+<script>
+    window.onload =function () {
+
+        function $(id) {
+            return typeof(id) === "string"? document.getElementById(id) : null;
+        }
+
+        function changeImg(li_id,imgSrc) {
+            $(li_id).onmouseover = function () {
+                $('box').style.background = imgSrc;
+                $('box').style.backgroundSize = '200px';
+            }
+        }
+
+        changeImg('li-01','url("img/A.jpg") no-repeat');
+        changeImg('li-02','url("img/B.jpg") no-repeat');
+        changeImg('li-03','url("img/C.jpg") no-repeat');
+        changeImg('li-04','url("img/D.jpg") no-repeat');
+
+        // var li_1 = document.getElementById('li-01');
+        // var li_2 = document.getElementById('li-02');
+        // var li_3 = document.getElementById('li-03');
+        // var li_4 = document.getElementById('li-04');
+        // var box = document.getElementById('box');
+        //
+        // li_1.onmouseover = function () {
+        //     box.style.background = 'url("img/A.jpg") no-repeat'
+        // };
+        // li_2.onmouseover = function () {
+        //     box.style.background = 'url("img/B.jpg") no-repeat'
+        // };
+        // li_3.onmouseover = function () {
+        //     box.style.background = 'url("img/C.jpg") no-repeat'
+        // };
+        // li_4.onmouseover = function () {
+        //     box.style.background = 'url("img/D.jpg") no-repeat'
+        // }
+    }
+</script>
+</body>
+</html>

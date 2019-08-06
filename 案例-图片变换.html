@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标移动-图片变换</title>
+</head>
+<body>
+<div id="imgs">
+    <img id='img-1' src="img/Profile.jpg" height="100" width="100"/>
+</div>
+<script>
+    var img1 = document.getElementById('img-1');
+    img1.onmouseenter = function () {
+        this.src = 'img/2.jpg';
+    };
+    img1.onmouseleave = function () {
+        this.src = 'img/Profile.jpg';
+    }
+    img1.onmousemove = function () {
+        console.log('move');
+    }
+</script>
+</body>
+</html>

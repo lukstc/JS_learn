@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      span{
+        border: 1px solid skyblue;
+        padding: 10 px;
+        margin: 3px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script type='text/html'>
+      var score;
+
+      score = prompt("Score is: ");
+
+      if (score >= 90 && score <= 100){
+        alert('A');
+      }else if(score >= 80 && score < 90){
+        alert('B');
+      }else if(score >= 60 && score < 80){
+        alert('C');
+      }else if(score >= 0 && score < 60){
+        alert('F');
+      }else{
+        alert('Unkown');
+      }
+    </script>
+    <script type="text/html">
+      var s;
+      s = +(window.prompt('input'));
+
+      var level = Math.floor(s/10);
+      alert(level);
+      switch (level) {
+        case 10:
+        case 9:
+          alert('A')
+          break;
+        case 8:
+            alert('B')
+            break;
+        case 7:
+            alert('C')
+            break;
+        case 6:
+            alert('D')
+            break;
+        case 5:
+        case 4:
+        case 3:
+        case 2:
+        case 1:
+        case 0:
+            alert('F')
+            break;
+        default:
+          alert('Unkown');
+          break;
+      }
+    </script>
+    <script type="text/html">
+      var score;
+      score = +(window.prompt('input: '));
+      if(score>100){
+        alert('>100');
+      } else {
+        alert('<=100');
+
+      }
+    </script>
+    <script type="text/html">
+      var month;
+      month = +(window.prompt('please input a month: '));
+      if(isNaN(month)){
+        alert('error')
+      }else{
+        switch (month) {
+          case 1:
+          case 2:
+          case 12:
+            alert('winter')
+            break;
+          case 3:
+          case 4:
+          case 5:
+            alert('spring')
+            break;
+          case 6:
+          case 7:
+          case 8:
+            alert('summer')
+            break;
+          case 9:
+          case 10:
+          case 11:
+            alert('fall')
+            break;
+          default:
+            alert('unkown')
+            break;
+
+        }
+      }
+    </script>
+    <script type="text/html">
+      for (var i = 0; i <= 9; i++) {
+        for (var j = 0; j <= i; j++) {
+          window.document.write('<span>'+i+' * '+j+' = ' + i*j+'</span>')
+        }
+        window.document.write('<br/>')
+      }
+    </script>
+    <script type="text/javascript">
+      var arr = [1,2,3,4,4,3,2,1]
+      console.log(arr.indexOf(2));
+      console.log(arr.lastIndexOf(2));
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/html">
+    window.alert('aaa')
+</script>
+<script type="text/html">
+    console.log(window.document);
+</script>
+
+<script>
+    window.onload = function () {
+        var btn = document.getElementById('bt');
+        btn.onclick = deal;
+        function deal() {
+            alert('click!');
+        }
+    }
+</script>
+
+
+<button id = 'bt'>click</button>
+<script type="text/html">
+    // 1.获取事件源
+    var bbb = document.getElementById('bt');
+    var bbb2 = document.getElementsByClassName('m-bt');
+    var bbb3 = document.getElementsByTagName('button');
+    var bbb4 = document.getElementsByName('bt');
+    console.log(bbb);
+    console.log(bbb2);
+    console.log(bbb2[0]);
+    console.log(bbb3);
+    console.log(bbb4);
+    console.log(bbb4[0]);
+</script>
+
+</body>
+</html>

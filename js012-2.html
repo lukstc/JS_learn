@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box{
+            border: 1px solid black;
+            width: 200px;
+            height: 50px;
+            padding-top: 200px;
+            margin: 100px auto;
+            background: url("img/A.jpg") no-repeat;
+            background-size: 200px;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li id='li-01'><img src="img/A.jpg" width="50", height="50"></li>
+        <li id='li-02'><img src="img/B.jpg" width="50" height="50"></li>
+        <li id='li-03'><img src="img/C.jpg" width="50" height="50"></li>
+        <li id='li-04'><img src="img/D.jpg" width="50" height="50"></li>
+    </ul>
+</div>
+<script>
+    window.onload =function () {
+
+        var box = document.getElementById('box');
+        var all_li = document.getElementsByTagName('li');
+
+        console.log(all_li);
+
+        for (var i=0;i<all_li.length;i++){
+            var sLi = all_li[i];
+            sLi.index = i;
+            var str='ABCD';
+            sLi.onmouseover = function () {
+                console.log(str[this.index]);
+                box.style.background = 'url("img/'+str[this.index]+'.jpg") no-repeat';
+                box.style.backgroundSize = '200px';
+            };
+        };
+    };
+</script>
+</body>
+</html>

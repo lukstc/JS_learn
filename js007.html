@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/html">
+    var arr = [1,4,-10,9,100,1];
+    console.log(arr);
+    arr.sort(function (a,b) {
+        return a - b;
+    });
+    arr.sort(function (a,b) {
+        return b - a;
+    });
+    console.log(arr);
+</script>
+<script type="text/html">
+    // slice()
+    var arr = [12,2342,554,2323,23322];
+    var arr1 = arr.slice(-3);
+    console.log(arr1);
+</script>
+<script type="text/html">
+    //splice
+    var arr = [12,2342,554,2323,23322];
+    // var removeArr = arr.splice(0,3);
+    //
+    // console.log(removeArr);
+    // console.log(arr);
+    // console.log()
+    // arr.splice(2,0,'asdad','ssss');
+    // console.log(arr);
+
+    arr.splice(0);
+    console.log(arr);
+</script>
+
+<script type="text/html">
+    var arr = [12,2342,554,2323,23322];
+    arr.forEach(function (value,index) {
+        console.log(index+':'+value);
+    })
+</script>
+
+<script type="text/html">
+    var arr = [12,2342,554,2323,23322];
+    console.log(arr);
+    var arr2 = arr.map(function (value,index) {
+        return value-1;
+    })
+    console.log(arr2);
+</script>
+
+<script type="text/html">
+    var arr = [12,2342,554,2323,23322,22,21];
+    var arr2 = arr.filter(function (value,index) {
+        return index<=2;
+    })
+    console.log(arr2);
+</script>
+<script>
+    var arr = [12,2342,554,2323,23322,22,21];
+    var arr2 = arr.some(function (value,index) {
+        return value===12;
+    })
+    console.log(arr2);
+</script>
+
+</body>
+</html>

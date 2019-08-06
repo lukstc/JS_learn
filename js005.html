@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/html">
+        function log() {
+          console.log(10);
+        }
+        alert(0)
+        log();
+    </script>
+
+    <script type="text/html">
+       function sum() {
+         console.log(1+3);
+       }
+       sum();
+
+       var add = function () {
+         console.log(1+4);
+       }
+       add();
+
+       var add2 = new Function(console.log(1+5));
+       add2();
+    </script>
+
+    <script type="text/html">
+      function sum(num1,num2){
+        console.log(num1+num2)
+      }
+      sum(2);
+    </script>
+
+    <script type="text/html">
+      //
+      function sum(numArr) {
+        var value = 0;
+        for(var i=0 ;i<numArr.length ;i++){
+          value += numArr[i];
+        }
+        console.log(value);
+      }
+      sum([1,2,3])
+    </script>
+
+    <script type="text/html">
+      //
+      function sum() {
+        var value = 0;
+        for(var i=0 ;i<arguments.length ;i++){
+          value += arguments[i];
+        }
+        console.log(value);
+      }
+      sum(2,3,4)
+    </script>
+
+    <script type="text/html">
+      function sum2(num1,num2) {
+        return num1+num2;
+      }
+      console.log(sum2(1,3));
+    </script>
+
+    <script type="text/html">
+      function even(num) {
+        if(num % 2 === 0){
+          console.log('Even');
+        }else{
+          console.log('Odd');
+        }
+      }
+      even(-3);
+    </script>
+
+    <script type="text/html">
+      function min(num1,num2) {
+        if(num1<num2){
+          return num1;
+        }else if(num1>num2){
+          return num2;
+        }else{
+          return 'equal';
+        }
+      }
+      console.log(min(1,10))
+    </script>
+
+    <script type="text/html">
+      document.onclick = function(){
+        alert('aaa')
+      }
+    </script>
+
+    <script type="text/html">
+      setInterval(function(){
+        console.log(222);
+      },111)
+    </script>
+
+    <script type="text/html">
+      (function (){
+        alert('sss')
+      })()
+    </script>
+
+    <script type="text/html">
+      function add(a,b) {
+        return a+b;
+      }
+      function sub(a,b) {
+        return a-b;
+      }
+      function pro(a,b) {
+        return a*b;
+      }
+      function div(a,b) {
+        return a/b;
+      }
+
+      function fn(num1,num2,func){
+        return func(num1,num2);
+      }
+      console.log(fn(2,3,div));
+    </script>
+
+    <script type="text/html">
+      //1,1,2,3,5,8,13,21
+      function f1(n) {
+        if (n===1 || n===2) {
+          return 1;
+        }
+        return f1(n-1) + f1(n-2);
+      }
+      console.log(f1(1));
+      console.log(f1(2));
+      console.log(f1(3));
+      console.log(f1(4));
+      console.log(f1(5));
+      console.log(f1(6));
+      console.log(f1(7));
+    </script>
+
+    <script type="text/html">
+      function sumN(n){
+        if (1===n) {
+          return 1;
+        }
+        return n + sumN(n-1);
+      }
+      console.log(sumN(9));
+    </script>
+
+    
+
+  </body>
+</html>

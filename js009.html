@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 600px;
+            height: 600px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <p id="word">hhh</p>
+    <button>Submit</button>
+    <img src="img/Profile.jpg" height="125" width="125" alt="pic"/>
+</div>
+<script type="text/html">
+    window.onload = function () {
+        var box = document.getElementById('box');
+        var img = document.createElement("img");
+        img.src = 'img/2.jpg';
+        img.width = 200;
+        // box.appendChild(img);
+        var btu = document.getElementsByTagName("button")[0];
+        box.insertBefore(img,btu);
+
+        var word = document.getElementById('word');
+        // word.parentNode.removeChild(word);
+        word.remove();
+    }
+</script>
+<script type="text/html">
+    window.onload = function () {
+        var box = document.getElementById('box');
+        var newtag = box.cloneNode(false);
+        var newtag2 = box.cloneNode(true);
+        console.log(newtag);
+        console.log(newtag2);
+        document.body.appendChild(newtag);
+        document.body.appendChild(newtag2);
+    }
+</script>
+<script>
+    window.onload = function () {
+        var img = document.getElementsByTagName("img")[0];
+        console.log(img.src);
+        console.log(img.getAttribute('src'));
+        console.log(img.alt);
+        console.log(img.getAttribute('alt'));
+        img.setAttribute('src','img/2.jpg');
+        img.setAttribute('alt','img/2.jpg');
+        img.setAttribute('height','200');
+    }
+</script>
+</body>
+</html>

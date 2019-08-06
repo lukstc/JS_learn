@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #e_code{
+            width: 50px;
+            height: 50px;
+            background: url("img/Profile.jpg") no-repeat;
+            position: fixed;
+            top: 40%;
+            left: 0%;
+            cursor: pointer;
+        }
+        #e_app{
+            position: absolute;
+            left: 50px;
+            top: -50px;
+            display: none;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="e_code">
+        <div id="e_app">
+            <img src="img/2.jpg" alt="2" width="150">
+        </div>
+    </div>
+<script>
+    window.onload = function () {
+        var e_code = document.getElementById('e_code');
+        var e_app = document.getElementById('e_app');
+
+        e_code.onmouseover = function () {
+            //change background pic
+            this.style.background = 'url("img/smile.jpg") no-repeat';
+            //display profile pic
+            e_app.style.display='block';
+        };
+        console.log(e_code.style.background);
+        e_code.onmouseleave = function () {
+            //hide profile pic
+            this.style.background = 'url("img/Profile.jpg") no-repeat';
+            //show background pic
+            e_app.style.display='none';
+        };
+        console.log(e_code.style.background);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            vertical-align: top;
+        }
+        body{
+            background: url("img/A.jpg") no-repeat;
+            background-size: cover;
+        }
+        #box{
+            background-color: rgba(255,255,255,0.5);
+        }
+
+        #box ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #box ul li img{
+            height: 120px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><img src="img/A.jpg"></li>
+        <li><img src="img/B.jpg"></li>
+        <li><img src="img/C.jpg"></li>
+        <li><img src="img/D.jpg"></li>
+    </ul>
+</div>
+<script>
+    window.onload = function () {
+        var box = document.getElementById('box');
+        var allLis = box.getElementsByTagName('li');
+        // console.log(box);
+        // console.log(allLis);
+        var str='ABCD';
+        for (var i=0;i<allLis.length;i++){
+            var sLi = allLis[i];
+            console.log(sLi);
+            sLi.index=i;
+            sLi.onclick = function(){
+                document.body.style.background =  'url("img/'+str[this.index]+'.jpg") no-repeat';
+                document.body.style.backgroundSize = 'cover';
+            }
+        }
+    }
+</script>
+</body>
+</html>
