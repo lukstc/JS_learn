@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li{
+    text-decoration: none;
+    color: black;
+}
+
+#tab{
+    width: 500px;
+    height: 120px;
+    border: 1px solid darkgray;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+#tab_head{
+    background-color: white;
+    height: 28px;
+    line-height: 28px;
+}
+
+#tab_head ul{
+    width: 500px;
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*background-color: #e8e8e8;*/
+    /*height: 28px;*/
+}
+
+#tab_head ul li{
+    float: left;
+    width: 98px;
+    background-color: darkgray;
+    text-align: center;
+    padding: 0 1px;
+    border-bottom: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+}
+
+#tab_head ul li.selected{
+    float: left;
+    width: 98px;
+    background-color: white;
+    text-align: center;
+    border-bottom: none;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 0;
+}
+
+/*#tab_head ul li:nth-child(1){*/
+/*    border-left: none;*/
+/*}*/
+
+/*#tab_head ul li:nth-last--child(1){*/
+/*    border-right: none;*/
+/*}*/
+
+#tab_head ul li:hover{
+    font-weight: bolder;
+    color: orangered;
+}
+
+#tab_body{
+
+}
+
+#tab_body .dom{
+    padding-top: 20px;
+}
+
+#tab_body .dom li {
+    float: left;
+    width: 220px;
+    text-align: center;
+    margin: 5px;
+}
+
+#tab_body div li:hover {
+    color: orangered;
+    font-weight: bolder;
+}

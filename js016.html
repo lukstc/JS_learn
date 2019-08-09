@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="name" type="text" placeholder="please input">
+<script>
+    window.onload =function () {
+
+        var name = document.getElementById('name');
+
+        //获得焦点
+        name.onfocus = function () {
+            this.style.width = '600px';
+            this.style.height = '40px';
+            this.style.outline = 'none';
+            this.style.fontSize = '20px';
+        };
+        //失去焦点
+        name.onblur = function () {
+            this.style.width = '100px';
+            this.style.height = '20px';
+            this.style.outline = 'solid';
+            this.style.fontSize = '10px';
+        };
+    }
+</script>
+</body>
+</html>

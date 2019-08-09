@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #prompt{
+            font-size: 13px;
+            color: darkgray;
+        }
+        #score{
+            border: darkgray 1px solid;
+        }
+        .right{
+            background: url("img/icon_right.png") no-repeat 5px center;
+            background-size: 12px 16px;
+            padding-left: 25px;
+            color: green !important;
+        }
+        .error{
+            background: url("img/icon_cross.png") no-repeat 5px center;
+            background-size: 15px 15px;
+            padding-left: 25px;
+            color: red !important;
+        }
+    </style>
+</head>
+<body>
+<br>form input check
+<br>score between [0,100]
+<div id="box">
+    <label>Your score:</label>
+    <input id="score" type="text" placeholder="your score">
+    <span id="prompt">Please input your score!</span>
+</div>
+<script>
+    window.onload = function () {
+        //获取事件
+        function $(id) {
+            return typeof id === 'string'? document.getElementById(id):null
+        }
+        //验证输入内容
+
+        //onfocus
+        //onblur
+        $('score').onblur = function () {
+            console.log(this.value);
+            if (parseInt(this.value)>=0 && parseInt(this.value)<=100){
+              $('prompt').className = 'right';
+              $('prompt').innerText = 'valid score!';
+            }else {
+                $('prompt').innerText = 'please input a valid score';
+                $('prompt').className = 'error';
+            };
+        }
+        $('score').onfocus = function () {
+            $('prompt').innerText = 'please input your score!';
+            $('prompt').className='';
+        }
+        $('score').onkeypress = function () {
+            console.log(this.value);
+            if (parseInt(this.value)>=0 && parseInt(this.value)<=100){
+                $('prompt').className = 'right';
+                $('prompt').innerText = 'valid score!';
+            }else {
+                $('prompt').innerText = 'please input a valid score';
+                $('prompt').className = 'error';
+            };
+        }
+
+    }
+</script>
+</body>
+</html>
